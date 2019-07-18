@@ -1,4 +1,3 @@
-var json;
 var tag_dataset = [];
 var net = new brain.recurrent.LSTM();
 var load = function (d) {
