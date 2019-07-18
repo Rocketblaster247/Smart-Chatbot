@@ -3,12 +3,12 @@ var net = new brain.recurrent.LSTM();
 var load = function (d) {
   tag_dataset = d.toString().split(";");
     net.train(tag_dataset, {
-      iterations: 100,
+      iterations: 300,
       errorThresh: 0.01,
       log: true,
       logPeriod: 1,
-      learningRate: 0.2,
-      momentum: 1,
+      learningRate: 0.5,
+      momentum: 0.5,
       callback: null,
       callbackPeriod: 10,
       timeout: 1000*60,
