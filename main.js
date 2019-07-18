@@ -1,3 +1,5 @@
+var artyom = new Artyom();
+artyom.say("Hmm...");
 var tag_dataset = [];
 var net = new brain.recurrent.LSTM();
 var load = function (d) {
@@ -15,8 +17,8 @@ var load = function (d) {
     });
 };
 var say = function (x) {
-  var y = net.run(x+"=>");
-  
+  var y = net.run(x+"=>").toString().split("=>").join("");
+  artyom.say(y);
 };
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "tag-dataset");
