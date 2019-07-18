@@ -14,6 +14,10 @@ var load = function (d) {
       timeout: 1000*60,
     });
 };
+var say = function (x) {
+  var y = net.run(x+"=>");
+  
+};
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "tag-dataset");
 xhr.addEventListener("load", function (x) {
