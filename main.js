@@ -4,7 +4,7 @@ var load = function (d) {
   tag_dataset = d.toString().split(";");
     net.train(tag_dataset, {
       iterations: 10000,
-      errorThresh: 0.001,
+      errorThresh: 0.01,
       log: true,
       logPeriod: 1,
       learningRate: 0.2,
