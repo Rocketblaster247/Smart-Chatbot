@@ -19,6 +19,7 @@ var load = function (d) {
 };
 var say = function (x) {
   var y = net.run(x+"=>").toString().split("=>").join("");
+  console.log(y);
   artyom.say(y);
 };
 var xhr = new XMLHttpRequest();
