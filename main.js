@@ -11,7 +11,7 @@ var load = function (d) {
       log: true,
       logPeriod: 1,
       learningRate: 0.2,
-      momentum: 1,
+      momentum: 0.9,
       callback: null,
       callbackPeriod: 10,
       timeout: 1000*60,
