@@ -7,11 +7,11 @@ var load = function (d) {
   tag_dataset = d.toString().split(";");
     net.train(tag_dataset, {
       iterations: 500,
-      errorThresh: 0.01,
+      errorThresh: 0.03,
       log: true,
       logPeriod: 1,
       learningRate: 0.2,
-      momentum: 0.25,
+      momentum: 1,
       callback: null,
       callbackPeriod: 10,
       timeout: 1000*60,
