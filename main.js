@@ -6,7 +6,7 @@ net.fromJSON({"type":"LSTM","options":{"inputSize":63,"inputRange":63,"hiddenLay
 var load = function (d) {
   tag_dataset = d.toString().split(";");
     net.train(tag_dataset, {
-      iterations: 300,
+      iterations: 500,
       errorThresh: 0.01,
       log: true,
       logPeriod: 1,
