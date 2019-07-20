@@ -5,7 +5,7 @@ var net = new brain.recurrent.LSTM();
 var load = function (d) {
   tag_dataset = d.toString().split(";");
     net.train(tag_dataset, {
-      iterations: 500,
+      iterations: 1000,
       errorThresh: 0.03,
       log: true,
       logPeriod: 1,
