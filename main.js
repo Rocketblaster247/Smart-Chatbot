@@ -22,7 +22,7 @@ chatbot.prototype.prepString = function (x) {
   x = x.toString();
   if (this.replace.length > 0) {
     for (var i = 0; i < this.replace.length; i ++) {
-      x = x.toString().split(this.replace[i].a).join(b);
+      x = x.toString().split(this.replace[i].a).join(this.replaca[i].b);
     }
   }
   var variables = {};
