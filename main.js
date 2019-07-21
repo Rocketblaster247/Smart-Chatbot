@@ -1,6 +1,6 @@
 var artyom = new Artyom();
 artyom.say("Hmm...");
-artyom.say("Welcome ... I am the future's world best chatbot ... Please develope me on github!");
+artyom.say("Welcome ... I am the future's world best chat bot ... Please develope me on git hub!");
 var chatbot = function () {
   this.replace = [];
   this.functions = {};
