@@ -1,30 +1,41 @@
 var artyom = new Artyom();
 artyom.say("Hmm...");
-var tag_dataset = [];
-var net = new brain.recurrent.LSTM();
-var load = function (d) {
-  tag_dataset = d.toString().split(";");
-    net.train(tag_dataset, {
-      iterations: 1000,
-      errorThresh: 0.03,
-      log: true,
-      logPeriod: 1,
-      learningRate: 0.2,
-      momentum: 0.1,
-      callback: null,
-      callbackPeriod: 10,
-      timeout: 1000*60,
-    });
+artyom.say("Welcome ... I am the future's world best chatbot ... Please develope me on github!");
+var chatbot = function () {
+  this.replace = [];
+  this.functions = {};
+  this.responses = [];
 };
-var say = function (x) {
-  var y = net.run(x+"=>").toString().split("=>").join("");
-  console.log(y);
-  artyom.say(y);
+chatbot.prototype.addSub = function (/*replace*/ a, /* with */ b) {
+  this.replace.push({a: a, b: b});
 };
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "response-dataset");
-xhr.addEventListener("load", function (x) {
-    console.log("Loaded file...");
-    load(this.responseText);
-});
-xhr.send();
+chatbot.prototype.addFunction = function (name, f) {
+  this.functions[name] = f;
+};
+chatbot.prototype.ask = function () {
+  
+};
+chatbot.prototype.addPhrase = function (que, response) {
+  this.response.push({que: que, res: response});
+};
+chatbot.prototype.prepString = function (x) {
+  x = x.toString();
+  for (var i = 0; i < this.replace.length; i ++) {
+    x = x.toString().split(this.replace[i].a).join(b);
+  }
+  var variables = {};
+  x = x.toString().split(" ");
+  return x;
+};
+chatbot.prototype.checkMatch = function (a, b) {
+  
+};
+chatbot.prototype.setup = function (a) {
+  
+};
+chatbot.prototype.getSetup = function (a) {
+  
+};
+var sixla = new chatbot();
+sixla.addSub(["He'll'"], "He will");
+sixla.ask("Hello, He'll be with you shortly.");
