@@ -39,5 +39,5 @@ chatbot.prototype.getSetup = function (a) {
   
 };
 var sixla = new chatbot();
-sixla.addSub(["He'll'"], "He will");
+sixla.addSub("He'll", "He will");
 sixla.ask("Hello, He'll be with you shortly.");
