@@ -20,8 +20,10 @@ chatbot.prototype.addPhrase = function (que, response) {
 };
 chatbot.prototype.prepString = function (x) {
   x = x.toString();
-  for (var i = 0; i < this.replace.length; i ++) {
-    x = x.toString().split(this.replace[i].a).join(b);
+  if (this.replace.length > 0) {
+    for (var i = 0; i < this.replace.length; i ++) {
+      x = x.toString().split(this.replace[i].a).join(b);
+    }
   }
   var variables = {};
   x = x.toString().split(" ");
